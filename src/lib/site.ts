@@ -1,0 +1,17 @@
+export const SITE = {
+  name: "Putra Adi Firmansyah",
+  initials: "PA",
+  email: "putra.adif@gmail.com",
+  phone: "+62 812-3456-7890",
+  phoneHref: "tel:+6281234567890",
+  location: "Jakarta, Indonesia",
+  timezone: "Asia/Jakarta",
+  timezoneLabel: "Jakarta (WIB)",
+  github: "https://github.com",
+  linkedin: "https://linkedin.com",
+  instagram: "https://instagram.com",
+  twitter: "https://x.com",
+  githubRepos: "28",
+  githubStars: "1.4k",
+  githubCommits: "900+",
+} as const;
