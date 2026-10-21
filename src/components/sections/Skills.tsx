@@ -103,10 +103,12 @@ const Skills = () => {
           );
         })}
       </div>
+
       <FadeIn className="mt-16 text-center sm:mt-20">
         <DividerLabel>{t.learning_title}</DividerLabel>
         <p className="mt-3 text-sm text-faint">{t.learning_sub}</p>
       </FadeIn>
+
       <div className="mt-9 grid gap-5 sm:grid-cols-3">
         {LEARNING.map((l, idx) => (
           <FadeIn key={l.name} delay={0.1 + idx * 0.1}>
@@ -130,9 +132,7 @@ const Skills = () => {
                     <h3 className="truncate font-display text-base font-bold text-fore">
                       {l.name}
                     </h3>
-                    <p className="mt-0.5 truncate text-xs text-faint">
-                      {t[l.key]}
-                    </p>
+                    <p className="mt-0.5 text-xs text-faint">{t[l.key]}</p>
                   </div>
                 </div>
                 <CountUp

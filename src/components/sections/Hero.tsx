@@ -99,95 +99,99 @@ const Hero = () => {
             <SocialLinks />
           </FadeIn>
         </div>
-        <FadeIn
-          delay={0.22}
-          className="relative mx-auto aspect-square w-72 sm:w-96 lg:w-full lg:max-w-md"
-        >
-          <div className="orb absolute inset-[12%] rounded-full bg-violet-600/25 blur-3xl" />
-          <div className="orb absolute inset-[30%] rounded-full bg-cyan-500/20 blur-3xl" />
-          <div className="animate-ring-spin absolute inset-0 rounded-full border border-dashed border-faint/40" />
-          <div className="animate-ring-spin-rev absolute inset-[9%] rounded-full border border-dotted border-faint/30" />
-
-          <div className="animate-orbit absolute inset-0">
-            {[
-              {
-                pos: "left-1/2 top-0 -translate-x-1/2 -translate-y-1/2",
-                Icon: SiReact,
-                label: "React",
-                color: "text-accent",
-              },
-              {
-                pos: "right-0 top-1/2 translate-x-1/2 -translate-y-1/2",
-                Icon: HiOutlineShieldCheck,
-                label: "Security",
-                color: "text-emerald-400",
-              },
-              {
-                pos: "bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2",
-                Icon: HiOutlineSparkles,
-                label: "AI",
-                color: "text-fuchsia-400",
-              },
-              {
-                pos: "left-0 top-1/2 -translate-x-1/2 -translate-y-1/2",
-                Icon: HiOutlineCode,
-                label: "Code",
-                color: "text-accent-2",
-              },
-            ].map(({ pos, Icon, label, color }) => (
-              <div key={label} className={`absolute ${pos}`}>
-                <div className="animate-orbit-rev shadow-soft flex items-center gap-2 rounded-2xl border border-line bg-panel/90 px-3 py-2 backdrop-blur">
-                  <Icon className={`h-4 w-4 ${color}`} />
-                  <span className="text-[11px] font-semibold text-body">
-                    {label}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div
-            className="absolute inset-[19%] rounded-full p-0.75"
-            style={{
-              background:
-                "conic-gradient(from 120deg, #a78bfa, #e879f9, #22d3ee, #a78bfa)",
-            }}
+        <div className="max-w-full overflow-hidden pt-10 pb-15">
+          <FadeIn
+            delay={0.22}
+            className="relative mx-auto aspect-square w-72 sm:w-96 lg:w-full lg:max-w-md"
           >
-            <div className="shadow-soft flex h-full w-full items-center justify-center rounded-full bg-panel">
-              <span className="grad-text font-display text-6xl font-bold sm:text-7xl">
-                {SITE.initials}
-              </span>
-            </div>
-          </div>
+            <div className="orb absolute inset-[12%] rounded-full bg-violet-600/25 blur-3xl" />
+            <div className="orb absolute inset-[30%] rounded-full bg-cyan-500/20 blur-3xl" />
+            <div className="animate-ring-spin absolute inset-0 rounded-full border border-dashed border-faint/40" />
+            <div className="animate-ring-spin-rev absolute inset-[9%] rounded-full border border-dotted border-faint/30" />
 
-          <div className="absolute -top-1 right-0 z-20 sm:-right-3">
-            <div className="animate-float-soft shadow-soft flex items-center gap-2.5 rounded-2xl border border-line bg-panel/95 px-4 py-2.5 backdrop-blur">
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
-              </span>
-              <span className="text-xs font-semibold text-body">{t.open}</span>
+            <div className="animate-orbit absolute inset-0">
+              {[
+                {
+                  pos: "left-1/2 top-0 -translate-x-1/2 -translate-y-1/2",
+                  Icon: SiReact,
+                  label: "React",
+                  color: "text-accent",
+                },
+                {
+                  pos: "right-0 top-1/2 translate-x-1/2 -translate-y-1/2",
+                  Icon: HiOutlineShieldCheck,
+                  label: "Security",
+                  color: "text-emerald-400",
+                },
+                {
+                  pos: "bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2",
+                  Icon: HiOutlineSparkles,
+                  label: "AI",
+                  color: "text-fuchsia-400",
+                },
+                {
+                  pos: "left-0 top-1/2 -translate-x-1/2 -translate-y-1/2",
+                  Icon: HiOutlineCode,
+                  label: "Code",
+                  color: "text-accent-2",
+                },
+              ].map(({ pos, Icon, label, color }) => (
+                <div key={label} className={`absolute ${pos}`}>
+                  <div className="animate-orbit-rev shadow-soft flex items-center gap-2 rounded-2xl border border-line bg-panel/90 px-3 py-2 backdrop-blur">
+                    <Icon className={`h-4 w-4 ${color}`} />
+                    <span className="text-[11px] font-semibold text-body">
+                      {label}
+                    </span>
+                  </div>
+                </div>
+              ))}
             </div>
-          </div>
 
-          <div className="absolute -bottom-2 left-0 z-20 sm:-left-4">
             <div
-              className="animate-float-soft shadow-soft rounded-2xl border border-white/10 bg-[#0a0a12] px-4 py-3 font-mono text-[11px] leading-relaxed"
-              style={{ animationDelay: "-3.5s" }}
+              className="absolute inset-[19%] rounded-full p-0.75"
+              style={{
+                background:
+                  "conic-gradient(from 120deg, #a78bfa, #e879f9, #22d3ee, #a78bfa)",
+              }}
             >
-              <p>
-                <span className="text-violet-400">$ </span>
-                <span className="text-zinc-300">whoami</span>
-              </p>
-              <p className="text-emerald-400">
-                putra.adif
-                <span className="animate-caret ml-0.5 inline-block h-[0.9em] w-0.5 rounded-sm bg-emerald-400" />
-              </p>
+              <div className="shadow-soft flex h-full w-full items-center justify-center rounded-full bg-panel">
+                <span className="grad-text font-display text-6xl font-bold sm:text-7xl">
+                  {SITE.initials}
+                </span>
+              </div>
             </div>
-          </div>
-        </FadeIn>
+
+            <div className="absolute -top-1 right-0 z-20 sm:-right-3">
+              <div className="animate-float-soft shadow-soft flex items-center gap-2.5 rounded-2xl border border-line bg-panel/95 px-4 py-2.5 backdrop-blur">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+                </span>
+                <span className="text-xs font-semibold text-body">
+                  {t.open}
+                </span>
+              </div>
+            </div>
+
+            <div className="absolute -bottom-2 left-0 z-20 sm:-left-4">
+              <div
+                className="animate-float-soft shadow-soft rounded-2xl border border-white/10 bg-[#0a0a12] px-4 py-3 font-mono text-[11px] leading-relaxed"
+                style={{ animationDelay: "-3.5s" }}
+              >
+                <p>
+                  <span className="text-violet-400">$ </span>
+                  <span className="text-zinc-300">whoami</span>
+                </p>
+                <p className="text-emerald-400">
+                  putra.adif
+                  <span className="animate-caret ml-0.5 inline-block h-[0.9em] w-0.5 rounded-sm bg-emerald-400" />
+                </p>
+              </div>
+            </div>
+          </FadeIn>
+        </div>
       </div>
-      <FadeIn delay={0.35} className="mt-20 sm:mt-30">
+      <FadeIn delay={0.35} className="mt-5 sm:mt-30">
         <DividerLabel>{t.best}</DividerLabel>
         <div className="marquee marquee-mask mt-7 overflow-hidden border-y border-line py-5">
           <div className="marquee-track animate-marquee flex w-max">
